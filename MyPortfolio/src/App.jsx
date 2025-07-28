@@ -12,7 +12,6 @@ import blocks from './blocks';
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Github, Twitter } from 'lucide-react';
-import Typewriter from 'react-simple-typewriter'
 
 function Home() {
   return (
