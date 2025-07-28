@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Typewriter from 'react-simple-typewriter';
 import { useNavigate } from 'react-router-dom';
 import profilePic from '../assets/Profiles/profilePic.jng.jpg';
 
@@ -51,19 +50,10 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
         >
-          <span className="text-white">
-            <Typewriter
-              words={["Hey, I am Arghya"]}
-              loop={false}
-              cursor
-              cursorStyle="_"
-              typeSpeed={90}
-              deleteSpeed={50}
-              delaySpeed={1000}
-            />
-          </span>
         </motion.h1>
-
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mt-4 mb-4 hero-underline relative inline-block">
+          Hey, I am Arghya
+        </h1>
         <motion.p
           className="text-lg md:text-2xl lg:text-3xl text-gray-300 leading-relaxed mb-4"
           initial={{ opacity: 0, y: 20 }}
