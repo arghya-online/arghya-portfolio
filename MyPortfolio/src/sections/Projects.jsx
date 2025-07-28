@@ -4,25 +4,25 @@ import { Github } from "lucide-react";
 
 const projects = [
   {
-    title: "Portfolio Website",
-    description: "A personal portfolio built with React and Tailwind CSS, showcasing my work and skills.",
-    tech: ["React", "Tailwind", "Framer Motion"],
-    github: "https://github.com/arghya/portfolio",
-    demo: "#",
+    title: "Gari Chalao - a mini racing game",
+    description: "A 2d racing game built with HTML, CSS and Vanilla J showcasing my work and skills.",
+    tech: ["HTML", "CSS", "Vanilla JS"],
+    github: "https://github.com/arghya-online/garichalao",
+    demo: "https://garichalao.vercel.app/",
   },
   {
-    title: "E-commerce UI",
-    description: "A modern e-commerce frontend with product listings, cart, and checkout flow.",
-    tech: ["React", "Redux", "Tailwind"],
-    github: "https://github.com/arghya/ecommerce-ui",
-    demo: "#",
+    title: "YourVaultPass - A random password generator",
+    description: "A simple password generator that creates secure passwords for your accounts built with React and Tailwind CSS.",
+    tech: ["React", "Tailwind"],
+    github: "https://github.com/arghya-online/YourVaultPass",
+    demo: "https://yourvaultpass.vercel.app/",
   },
   {
-    title: "Blog Platform",
-    description: "A simple blog platform with markdown support and user authentication.",
-    tech: ["React", "Node.js", "MongoDB"],
-    github: "https://github.com/arghya/blog-platform",
-    demo: "#",
+    title: "My Eco Log",
+    description: "A platform to track your carbon footprint and learn about eco-friendly practices.",
+    tech: ["HTML", "CSS", "JavaScript", "Node.js"],
+    github: "https://github.com/arghya-online/CarbonTracker",
+    demo: "https://myecolog.vercel.app/",
   },
 ];
 

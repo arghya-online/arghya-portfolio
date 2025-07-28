@@ -28,7 +28,7 @@ export default function Contact() {
           transition={{ delay: 0.2, duration: 0.5 }}
           viewport={{ once: true }}
         >
-          Let’s connect and build something great!
+          Let’s connect and build something great! I am available to internships and freelance projects. Feel free to reach out via email or connect with me on socials.
         </motion.p>
         <motion.div
           className="w-16 h-1 bg-teal-400 rounded-full mb-4"
@@ -45,15 +45,15 @@ export default function Contact() {
           transition={{ delay: 0.4, duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <a href="mailto:hello@arghya.dev" className="flex items-center gap-2 text-lg font-medium hover:text-teal-400 transition">
-            <Mail className="w-5 h-5" /> hello@arghya.dev
+          <a href="mailto:arghyatech555@gmail.com" className="flex items-center gap-2 text-lg font-medium hover:text-teal-400 transition">
+            <Mail className="w-5 h-5" /> arghyatech555@gmail.com
           </a>
           <span className="hidden md:inline text-gray-600">|</span>
-          <a href="https://github.com" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-lg font-medium hover:text-teal-400 transition">
+          <a href="https://github.com/arghya-online/" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-lg font-medium hover:text-teal-400 transition">
             <Github className="w-5 h-5" /> GitHub
           </a>
           <span className="hidden md:inline text-gray-600">|</span>
-          <a href="https://twitter.com" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-lg font-medium hover:text-teal-400 transition">
+          <a href="https://twitter.com/ArghyaOnline01/" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-lg font-medium hover:text-teal-400 transition">
             <Twitter className="w-5 h-5" /> Twitter
           </a>
         </motion.div>
