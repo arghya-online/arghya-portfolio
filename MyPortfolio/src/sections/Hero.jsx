@@ -73,12 +73,11 @@ export default function Hero() {
             View Work
           </button>
           <button
-            className="border border-white px-6 py-3 font-medium rounded-lg shadow hover:bg-white hover:text-black transition w-full text-lg md:text-xl"
+            className="bg-teal-400 text-white px-6 py-3 font-medium rounded-lg shadow hover:bg-white hover:text-black transition w-full text-lg md:text-xl"
             onClick={() => scrollToSection('contact')}
           >
-            Get in Touch
+            Contact Me
           </button>
-        </motion.div>
       </motion.div>
 
       <div className="relative w-[250px] h-[250px] md:w-[500px] md:h-[500px] rounded-full border-4 border-teal-400 mt-12 md:mt-0 z-10 overflow-hidden">
