@@ -1,21 +1,17 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from 'react-router-dom';
-import profilePic from '../assets/Profiles/profilePic.jng.jpg';
+import profilePic from '../assets/Profiles/profilePic.jpg'; // Fixed the image path
 
 export default function Hero() {
   const navigate = useNavigate();
-  // Scroll handlers for buttons
+
   const scrollToSection = (id) => {
     const el = document.getElementById(id);
     if (el) {
       el.scrollIntoView({ behavior: 'smooth' });
     } else {
-      navigate('/');
-      setTimeout(() => {
-        const el2 = document.getElementById(id);
-        if (el2) el2.scrollIntoView({ behavior: 'smooth' });
-      }, 100);
+      navigate('/', { state: { scrollTo: id } });
     }
   };
 
@@ -26,6 +22,7 @@ export default function Hero() {
         animate={{ scale: [1, 1.2, 1] }}
         transition={{ duration: 8, repeat: Infinity, repeatType: 'loop' }}
       />
+
       <motion.div
         className="max-w-2xl z-10"
         initial={{ opacity: 0, y: 50 }}
@@ -41,16 +38,10 @@ export default function Hero() {
           FRONTEND ENGINEER
         </motion.h4>
 
-        <motion.h1
-          className="text-5xl md:text-7xl lg:text-8xl font-bold mt-4 mb-4 hero-underline relative inline-block"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-        >
-        </motion.h1>
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mt-4 mb-4 hero-underline relative inline-block">
           Hey, I am Arghya
         </h1>
+
         <motion.p
           className="text-lg md:text-2xl lg:text-3xl text-gray-300 leading-relaxed mb-4"
           initial={{ opacity: 0, y: 20 }}
@@ -78,6 +69,7 @@ export default function Hero() {
           >
             Contact Me
           </button>
+        </motion.div>
       </motion.div>
 
       <div className="relative w-[250px] h-[250px] md:w-[500px] md:h-[500px] rounded-full border-4 border-teal-400 mt-12 md:mt-0 z-10 overflow-hidden">
@@ -93,4 +85,3 @@ export default function Hero() {
     </section>
   );
 }
-
