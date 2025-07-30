@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from 'react-router-dom';
-import profilePic from '../assets/Profiles/profilePic.jpg'; // Fixed the image path
+import profilePic from '../assets/Profiles/profilePic.jpg'; // Ensure correct path
 
 export default function Hero() {
   const navigate = useNavigate();
@@ -17,12 +17,29 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-screen flex flex-col md:flex-row items-center justify-between p-8 bg-black text-white overflow-hidden">
+      
+      {/* Glow Background */}
       <motion.div
         className="absolute -top-32 -left-32 w-[400px] h-[400px] bg-teal-700 opacity-20 rounded-full blur-3xl z-0"
         animate={{ scale: [1, 1.2, 1] }}
         transition={{ duration: 8, repeat: Infinity, repeatType: 'loop' }}
       />
 
+      {/* Hamburger Menu Icon */}
+      <button className="absolute top-6 right-6 z-20 md:hidden p-2 rounded-md hover:bg-white/10 transition">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-7 h-7 text-white"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          strokeWidth={2}
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+
+      {/* Left Text Block */}
       <motion.div
         className="max-w-2xl z-10"
         initial={{ opacity: 0, y: 50 }}
@@ -72,6 +89,7 @@ export default function Hero() {
         </motion.div>
       </motion.div>
 
+      {/* Right Profile Image */}
       <div className="relative w-[250px] h-[250px] md:w-[500px] md:h-[500px] rounded-full border-4 border-teal-400 mt-12 md:mt-0 z-10 overflow-hidden">
         <motion.img
           src={profilePic}
