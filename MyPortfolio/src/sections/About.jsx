@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 export default function About() {
   return (
-    <section className="relative bg-black text-white px-8 py-10 flex flex-col md:flex-row justify-between gap-8 md:gap-16 items-start overflow-hidden pb-0 mb-0">
+    <section className="mt-min-h-screen bg-black text-white px-8 py-10 flex flex-col md:flex-row justify-between align-center gap-8 md:gap-16 items-start overflow-hidden pb-0 mb-0">
       {/* Minimal gradient background */}
       <motion.div
         className="absolute -top-24 -right-32 w-[300px] h-[300px] bg-gradient-to-br from-teal-500 to-blue-500 opacity-20 rounded-full blur-3xl z-0"

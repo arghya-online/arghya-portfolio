@@ -11,7 +11,6 @@ export default function Hero() {
     if (el) {
       el.scrollIntoView({ behavior: 'smooth' });
     } else {
-      // If not on home, navigate home and scroll after render
       navigate('/');
       setTimeout(() => {
         const el2 = document.getElementById(id);
@@ -22,13 +21,11 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-screen flex flex-col md:flex-row items-center justify-between p-8 bg-black text-white overflow-hidden">
-      {/* Animated background element */}
       <motion.div
         className="absolute -top-32 -left-32 w-[400px] h-[400px] bg-teal-700 opacity-20 rounded-full blur-3xl z-0"
         animate={{ scale: [1, 1.2, 1] }}
         transition={{ duration: 8, repeat: Infinity, repeatType: 'loop' }}
       />
-      {/* Left Text Section */}
       <motion.div
         className="max-w-2xl z-10"
         initial={{ opacity: 0, y: 50 }}
@@ -73,7 +70,7 @@ export default function Hero() {
             className="bg-white text-black px-6 py-3 font-medium rounded-lg shadow hover:bg-teal-400 hover:text-white transition w-full text-lg md:text-xl"
             onClick={() => scrollToSection('projects')}
           >
-            View Work →
+            View Work
           </button>
           <button
             className="border border-white px-6 py-3 font-medium rounded-lg shadow hover:bg-white hover:text-black transition w-full text-lg md:text-xl"
