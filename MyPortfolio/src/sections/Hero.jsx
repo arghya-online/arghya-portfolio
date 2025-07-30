@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from 'react-router-dom';
-import profilePic from '../assets/Profiles/profilePic.jpg'; // Ensure correct path
+import profilePic from '../assets/Profiles/profilePic.jpg'; // Ensure this path is correct
 
 export default function Hero() {
   const navigate = useNavigate();
@@ -16,16 +16,16 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative min-h-screen flex flex-col md:flex-row items-center justify-between p-8 bg-black text-white overflow-hidden">
+    <section className="relative min-h-screen w-full flex flex-col md:flex-row items-center justify-between px-4 py-12 bg-black text-white overflow-hidden">
       
-      {/* Glow Background */}
+      {/* Glowing Background Orb */}
       <motion.div
         className="absolute -top-32 -left-32 w-[400px] h-[400px] bg-teal-700 opacity-20 rounded-full blur-3xl z-0"
         animate={{ scale: [1, 1.2, 1] }}
         transition={{ duration: 8, repeat: Infinity, repeatType: 'loop' }}
       />
 
-      {/* Hamburger Menu Icon */}
+      {/* Hamburger Icon */}
       <button className="absolute top-6 right-6 z-20 md:hidden p-2 rounded-md hover:bg-white/10 transition">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -39,9 +39,9 @@ export default function Hero() {
         </svg>
       </button>
 
-      {/* Left Text Block */}
+      {/* Text Section */}
       <motion.div
-        className="max-w-2xl z-10"
+        className="w-full md:max-w-2xl z-10"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
@@ -89,7 +89,7 @@ export default function Hero() {
         </motion.div>
       </motion.div>
 
-      {/* Right Profile Image */}
+      {/* Profile Image Section */}
       <div className="relative w-[250px] h-[250px] md:w-[500px] md:h-[500px] rounded-full border-4 border-teal-400 mt-12 md:mt-0 z-10 overflow-hidden">
         <motion.img
           src={profilePic}
