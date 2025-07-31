@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 
 const blogs = [
   {
-    title: "How I Built My Portfolio with React & Tailwind",
-    excerpt: "A step-by-step guide to building a modern, responsive portfolio using React and Tailwind CSS.",
-    slug: "how-i-built-my-portfolio",
-  },
+  title: "User Authentication in React with Appwrite",
+  excerpt: "A beginner-friendly guide to building a clean and modular authentication system using Appwrite inside a React app.",
+  slug: "user-authentication-with-appwrite-react"
+ },
   {
     title: "UI Design Principles for Developers",
     excerpt: "Essential design principles every frontend developer should know for creating beautiful interfaces.",
@@ -73,7 +73,7 @@ export default function BlogPreview() {
                 to={`/blog/${blog.slug}`}
                 className="inline-block px-4 py-2 rounded-lg bg-zinc-800 text-teal-400 hover:bg-teal-400 hover:text-white transition font-semibold shadow focus:outline-none focus:ring-2 focus:ring-teal-400"
               >
-                Read More →
+                Read More
               </Link>
             </motion.div>
           </motion.article>

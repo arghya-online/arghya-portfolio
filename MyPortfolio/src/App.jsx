@@ -8,6 +8,7 @@ import TechStack from './sections/TechStack';
 import Contact from './sections/Contact';
 import Projects from './sections/Projects';
 import BlogPreview from './sections/BlogPreview';
+import UserAuthenticationBlog from './sections/UserAuthenticationWithAppwrite';
 import blocks from './blocks';
 import { motion } from 'framer-motion';
 import { Mail, Github, Twitter } from 'lucide-react';
@@ -70,6 +71,7 @@ function App() {
         <Route path="/blog" element={<BlogPreview />} />
         <Route path="/blog/:slug" element={<BlogPostWrapper />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/blog/user-authentication-with-appwrite-react" element={<UserAuthenticationBlog />} />
         <Route path="*" element={<div className="text-white p-10">Page not found.</div>} />
       </Routes>
     </>
