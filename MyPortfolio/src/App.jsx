@@ -6,9 +6,10 @@ import Hero from './sections/Hero';
 import About from './sections/About';
 import TechStack from './sections/TechStack';
 import Contact from './sections/Contact';
-import Projects from './sections/Projects';
-import BlogPreview from './sections/BlogPreview';
-import UserAuthenticationBlog from './sections/UserAuthenticationWithAppwrite';
+import { lazy, Suspense } from 'react';
+const Projects = lazy(() => import('./sections/Projects'));
+const BlogPreview = lazy(() => import('./sections/BlogPreview'));
+const UserAuthenticationBlog = lazy(() => import('./sections/UserAuthenticationWithAppwrite'));
 import blocks from './blocks';
 import { motion } from 'framer-motion';
 import { Mail, Github, Twitter } from 'lucide-react';
@@ -19,8 +20,12 @@ function Home() {
       <Hero />
       <About />
       <TechStack />
-      <Projects />
-      <BlogPreview />
+      <Suspense fallback={<div className="text-white p-10">Loading Projects...</div>}>
+        <Projects />
+      </Suspense>
+      <Suspense fallback={<div className="text-white p-10">Loading Blogs...</div>}>
+        <BlogPreview />
+      </Suspense>
       <Contact />
     </>
   );
@@ -63,17 +68,31 @@ function App() {
   return (
     <>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/tech-stack" element={<TechStack />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/blog" element={<BlogPreview />} />
-        <Route path="/blog/:slug" element={<BlogPostWrapper />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/blog/user-authentication-with-appwrite-react" element={<UserAuthenticationBlog />} />
-        <Route path="*" element={<div className="text-white p-10">Page not found.</div>} />
-      </Routes>
+      <Suspense fallback={<div className="text-white p-10">Loading...</div>}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/tech-stack" element={<TechStack />} />
+          <Route path="/projects" element={
+            <Suspense fallback={<div className="text-white p-10">Loading Projects...</div>}>
+              <Projects />
+            </Suspense>
+          } />
+          <Route path="/blog" element={
+            <Suspense fallback={<div className="text-white p-10">Loading Blogs...</div>}>
+              <BlogPreview />
+            </Suspense>
+          } />
+          <Route path="/blog/:slug" element={<BlogPostWrapper />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/blog/user-authentication-with-appwrite-react" element={
+            <Suspense fallback={<div className="text-white p-10">Loading Blog...</div>}>
+              <UserAuthenticationBlog />
+            </Suspense>
+          } />
+          <Route path="*" element={<div className="text-white p-10">Page not found.</div>} />
+        </Routes>
+      </Suspense>
     </>
   );
 }

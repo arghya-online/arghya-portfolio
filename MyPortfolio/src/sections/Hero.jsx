@@ -18,14 +18,12 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen w-full flex flex-col md:flex-row items-center justify-between px-4 py-12 bg-black text-white overflow-hidden">
       
-      {/* Glowing Background Orb */}
       <motion.div
         className="absolute -top-32 -left-32 w-[400px] h-[400px] bg-teal-700 opacity-20 rounded-full blur-3xl z-0"
         animate={{ scale: [1, 1.2, 1] }}
         transition={{ duration: 8, repeat: Infinity, repeatType: 'loop' }}
       />
 
-      {/* Hamburger Icon */}
       <button className="absolute top-6 right-6 z-20 md:hidden p-2 rounded-md hover:bg-white/10 transition">
         <svg
           xmlns="http://www.w3.org/2000/svg"
