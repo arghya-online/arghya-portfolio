@@ -60,13 +60,15 @@ function App() {
       if (el) {
         setTimeout(() => {
           el.scrollIntoView({ behavior: 'smooth' });
+          // Clear scrollTo state after scrolling to prevent auto-scroll on reload
+          window.history.replaceState({}, '', location.pathname);
         }, 100); // Let DOM render first
       }
     }
   }, [location]);
 
   return (
-    <>
+    <div className="w-full">
       <Navbar />
       <Suspense fallback={<div className="text-white p-10">Loading...</div>}>
         <Routes>
@@ -93,7 +95,7 @@ function App() {
           <Route path="*" element={<div className="text-white p-10">Page not found.</div>} />
         </Routes>
       </Suspense>
-    </>
+    </div>
   );
 }
 

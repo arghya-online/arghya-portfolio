@@ -16,28 +16,14 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative min-h-screen w-full flex flex-col md:flex-row items-center justify-between px-4 py-12 bg-black text-white overflow-hidden">
+    <section className="relative min-h-screen w-full flex flex-col md:flex-row items-center justify-between px-4 py-12 bg-black text-white overflow-hidden pl-12 pr-12">
       
       <motion.div
         className="absolute -top-32 -left-32 w-[400px] h-[400px] bg-teal-700 opacity-20 rounded-full blur-3xl z-0"
         animate={{ scale: [1, 1.2, 1] }}
         transition={{ duration: 8, repeat: Infinity, repeatType: 'loop' }}
       />
-
-      <button className="absolute top-6 right-6 z-20 md:hidden p-2 rounded-md hover:bg-white/10 transition">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="w-7 h-7 text-white"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          strokeWidth={2}
-        >
-          <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
-
-      {/* Text Section */}
+      
       <motion.div
         className="w-full md:max-w-2xl z-10"
         initial={{ opacity: 0, y: 50 }}
@@ -53,7 +39,7 @@ export default function Hero() {
           FRONTEND ENGINEER
         </motion.h4>
 
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mt-4 mb-4 hero-underline relative inline-block">
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mt-4 hero-underline relative inline-block">
           Hey, I am Arghya
         </h1>
 
