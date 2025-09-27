@@ -46,8 +46,8 @@ export default function Contact() {
           transition={{ delay: 0.4, duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <a href="mailto:arghyatech555@gmail.com" className="flex items-center gap-2 text-lg font-medium hover:text-teal-400 transition">
-            <Mail className="w-5 h-5" /> arghyatech555@gmail.com
+          <a href="mailto: arghyamajumdar.contact@gmail.com" className="flex items-center gap-2 text-lg font-medium hover:text-teal-400 transition">
+            <Mail className="w-5 h-5" /> arghyamajumdar.contact@gmail.com
           </a>
           <span className="hidden md:inline text-gray-600">|</span>
           <a href="https://github.com/arghya-online/" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-lg font-medium hover:text-teal-400 transition">
