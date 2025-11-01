@@ -1,89 +1,59 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { useNavigate } from 'react-router-dom';
-import profilePic from '../assets/Profiles/profilePic.jpg'; // Ensure this path is correct
+import React from 'react'
+import ProfilePic from '../assets/profilePic.jpg'
+import { FaGithub, FaLinkedin, FaTwitter, FaYoutube, FaEnvelope } from 'react-icons/fa6';
+import { FaGlobe } from 'react-icons/fa6'; 
 
-export default function Hero() {
-  const navigate = useNavigate();
-
-  const scrollToSection = (id) => {
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
-    } else {
-      navigate('/', { state: { scrollTo: id } });
-    }
-  };
-
+function Hero() {
   return (
-    <section className="relative min-h-screen w-full flex flex-col md:flex-row items-center justify-between px-4 py-12 bg-black text-white overflow-hidden pl-12 pr-12">
-      
-      <motion.div
-        className="absolute -top-32 -left-32 w-[400px] h-[400px] bg-teal-700 opacity-20 rounded-full blur-3xl z-0"
-        animate={{ scale: [1, 1.2, 1] }}
-        transition={{ duration: 8, repeat: Infinity, repeatType: 'loop' }}
-      />
-      
-      <motion.div
-        className="w-full md:max-w-2xl z-10"
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-      >
-        <motion.h4
-          className="text-base md:text-lg lg:text-xl tracking-widest text-gray-400"
-          initial={{ opacity: 0, x: -40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.1 }}
-        >
-          FRONTEND ENGINEER
-        </motion.h4>
+    <>
+      <div id="hero" className='flex flex-col items-center min-h-screen bg-black text-white p-4'>
+        <div className='w-full max-w-2xl mx-auto py-8 md:py-20 border-dashed border-b-2 border-gray-500 my-4;'>
 
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mt-4 hero-underline relative inline-block">
-          Hey, I am Arghya
-        </h1>
-
-        <motion.p
-          className="text-lg md:text-2xl lg:text-3xl text-gray-300 leading-relaxed mb-4"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
-        >
-          I design and code clean, intentional web interfaces using React.
-        </motion.p>
-
-        <motion.div
-          className="flex flex-col sm:flex-row gap-4 mb-4 w-full max-w-xs"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5 }}
-        >
-          <button
-            className="bg-white text-black px-6 py-3 font-medium rounded-lg shadow hover:bg-teal-400 hover:text-white transition w-full text-lg md:text-xl"
-            onClick={() => scrollToSection('projects')}
-          >
-            View Work
-          </button>
-          <button
-            className="bg-teal-400 text-white px-6 py-3 font-medium rounded-lg shadow hover:bg-white hover:text-black transition w-full text-lg md:text-xl"
-            onClick={() => scrollToSection('contact')}
-          >
-            Contact Me
-          </button>
-        </motion.div>
-      </motion.div>
-
-      {/* Profile Image Section */}
-      <div className="relative w-[250px] h-[250px] md:w-[500px] md:h-[500px] rounded-full border-4 border-teal-400 mt-12 md:mt-0 z-10 overflow-hidden">
-        <motion.img
-          src={profilePic}
-          alt="profile"
-          className="w-full h-full object-cover scale-110"
-          initial={{ opacity: 0, x: 80 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.6, type: "spring", stiffness: 60 }}
-        />
+          <div className='flex flex-col items-center mb-2'>
+            <div className='border-lg border-red-600'>
+              <img src={ProfilePic} alt="Arghya" className='w-24 h-24 rounded-xl object-cover mb-4' />
+            </div>  
+            <h1 className='text-2xl font-bold'>Arghya</h1>
+            <p className='pt-4 text-m text-gray-400 hover:text-cyan-500'>@arghyabuilds</p>
+          </div>
+          <div className='mt-8 space-y-6 text-base text-gray-300'>
+            <p className='text-lg'>
+              Hey, I’m <span className='text-sky-400'>Arghya</span>. I’m a developer based in Kolkata. I spend most of my time building websites and applications that actually help in some way. I love when something I build ends up helping someone or solving a real problem.
+            </p>
+            <p>
+              Programming, for me, is half logic and half patience. It’s not always fun, sometimes it’s just me staring at the screen, fixing one tiny thing at a time. But the moment it finally works, it’s a proper Eureka feeling.
+            </p>
+            <p>
+              When I’m not working, I like to build and tinker with robots. So far, I’ve built 8+ bots, won 2+ hackathons, and shipped a few gigs along the way.
+            </p>
+            <p>
+              And yeah, maybe one day I’ll finally be able to explain to my parents what all this “coding stuff” actually is.
+            </p>
+          </div>
+          <div id="socials" className='flex justify-center space-x-6 mt-8'>
+            
+            <a href="mailto:arghyamajumdar.contact@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email" className='text-3xl text-gray-400 hover:text-red-500 transition duration-300'>
+              <FaEnvelope />
+            </a>
+            <a href="https://github.com/arghya-online" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className='text-3xl text-gray-400 hover:text-white transition duration-300'>
+              <FaGithub />
+            </a>
+            <a href="https://www.linkedin.com/in/arghya-majumdar-46128726b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className='text-3xl text-gray-400 hover:text-blue-600 transition duration-300'>
+              <FaLinkedin />
+            </a>
+            <a href="https://x.com/ArghyaOnline1" target="_blank" rel="noopener noreferrer" aria-label="Twitter/X" className='text-3xl text-gray-400 hover:text-cyan-400 transition duration-300'>
+              <FaTwitter />
+            </a>
+            <a href="https://www.youtube.com/@arghya_explains_" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className='text-3xl text-gray-400 hover:text-red-600 transition duration-300'>
+              <FaYoutube />
+            </a>
+            <a href="https://peerlist.io/arghya" target="_blank" rel="noopener noreferrer" aria-label="Peerlist" className='text-3xl text-gray-400 hover:text-green-500 transition duration-300'>
+            </a>
+          </div>
+        </div>
       </div>
-    </section>
-  );
+    </>
+  )
 }
+
+export default Hero

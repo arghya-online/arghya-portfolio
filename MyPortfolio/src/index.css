@@ -1,9 +1,12 @@
-/* In your index.css */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Space+Grotesk:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@400;500&display=swap');
 
 body {
   font-family: 'Inter', sans-serif;
+  background-color: #000;
+  color: #fff;
 }
 h1, h2, h3, .headline {
   font-family: 'Space Grotesk', sans-serif;
 }
+
