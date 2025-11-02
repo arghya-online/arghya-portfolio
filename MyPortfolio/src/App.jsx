@@ -7,6 +7,7 @@ import Skills from "./sections/Skills";
 import Blogs from "./sections/Blogs";
 import BlogPage from "./blogs/BlogPage";
 import EndNote from "./sections/EndNote";
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   return (
@@ -25,9 +26,9 @@ function App() {
           }
         />
 
-        {/*Blog Dynamic Page*/}
         <Route path="/blogs/:id" element={<BlogPage />} />
       </Routes>
+      <Analytics />
     </>
   );
 }
