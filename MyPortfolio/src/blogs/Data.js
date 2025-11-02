@@ -7,15 +7,10 @@ export const blogs = [
     link: "/blogs/vscode-setup",
   },
   {
-    id: "cpp-stl-guide",
-    title: "C++ STL Complete Guide for Competitive Programming",
-    desc: "Learn all essential STL components to speed up your problem-solving.",
-    link: "/blogs/cpp-stl-guide",
-  },
-  {
-    id: "modern-blog-mdx",
-    title: "How to Build a Modern Blog Website with Next.js and MDX",
-    desc: "Step-by-step breakdown of creating a fully modern blog experience.",
-    link: "/blogs/modern-blog-mdx",
-  },
+  id: "what-is-nodejs",
+  title: "What is Node.js and How it Works",
+  desc: "A simple breakdown of what Node.js is, where it came from, and how it actually works behind the scenes.",
+  link: "/blogs/what-is-nodejs",
+},
+
 ];

@@ -11,14 +11,14 @@ export default function Blogs() {
     >
       <div className="max-w-2xl mx-auto">
         <h1 className="text-3xl font-bold mb-8 underline underline-offset-8 decoration-gray-700">
-          Blogs
+          Some Blogs I've Written
         </h1>
 
         <div className="flex flex-col divide-y divide-gray-800">
           {blogs.map((blog) => (
             <Link
               key={blog.id}
-              to={blog.link} // ✅ uses React Router link (no reload)
+              to={blog.link}
               className="group py-6 flex items-start justify-between hover:pl-2 transition-all duration-300"
             >
               <div>

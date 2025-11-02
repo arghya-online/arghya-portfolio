@@ -6,12 +6,12 @@ import Hero from "./sections/Hero";
 import Skills from "./sections/Skills";
 import Blogs from "./sections/Blogs";
 import BlogPage from "./blogs/BlogPage";
+import EndNote from "./sections/EndNote";
 
 function App() {
   return (
     <>
       <Routes>
-        {/*Home Page*/}
         <Route
           path="/"
           element={
@@ -20,6 +20,7 @@ function App() {
               <Skills />
               <Projects />
               <Blogs />
+              <EndNote />
             </>
           }
         />

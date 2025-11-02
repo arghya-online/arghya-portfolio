@@ -1,7 +1,7 @@
 import React from 'react';
 import { 
   SiHtml5, SiCss3, SiJavascript, SiCplusplus, 
-  SiReact, SiNextdotjs, SiExpress, SiTailwindcss, 
+  SiReact, SiNodedotjs, SiExpress, SiTailwindcss, 
   SiFramer, SiGreensock, SiGit, SiGithub, SiArduino, SiVercel, SiNetlify, SiAppwrite
 } from 'react-icons/si';
 
@@ -15,6 +15,7 @@ const Skills = () => {
     ],
     "frameworksAndLibraries": [
       { name: "React", icon: SiReact, color: "text-cyan-400" },
+      { name: "Node.js", icon: SiNodedotjs, color: "text-green-500" },
       { name: "Express.js", icon: SiExpress, color: "text-gray-400" },
       { name: "Tailwind CSS", icon: SiTailwindcss, color: "text-sky-400" },
       { name: "Framer Motion", icon: SiFramer, color: "text-pink-500" },

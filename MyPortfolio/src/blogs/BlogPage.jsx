@@ -4,8 +4,7 @@ import { motion } from "framer-motion"; // ✅ for animation
 
 // Import your full written blogs here
 import VscodeSetup from "./writtenBlogs/VscodeSetup";
-import CppStlGuide from "./writtenBlogs/CppStlGuide";
-import ModernBlogMdx from "./writtenBlogs/ModernBlogMdx";
+import WhatIsNode from "./writtenBlogs/WhatIsNode";
 
 export default function BlogPage() {
   const { id } = useParams();
@@ -13,8 +12,7 @@ export default function BlogPage() {
   // Map blog IDs to their components
   const blogComponents = {
     "vscode-setup": <VscodeSetup />,
-    "cpp-stl-guide": <CppStlGuide />,
-    "modern-blog-mdx": <ModernBlogMdx />,
+    "what-is-nodejs": <WhatIsNode />,
   };
 
   const BlogComponent = blogComponents[id];
