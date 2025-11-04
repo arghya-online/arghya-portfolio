@@ -7,7 +7,7 @@ export default function Blogs() {
   return (
     <section
       id="blogs"
-      className="bg-black text-white px-4 sm:px-6 lg:px-8 py-16 font-Inter"
+      className="bg-transparent text-white px-4 sm:px-6 lg:px-8 py-16 font-Inter"
     >
       <div className="max-w-2xl mx-auto">
         <h1 className="text-3xl font-bold mb-8 underline underline-offset-8 decoration-gray-700">

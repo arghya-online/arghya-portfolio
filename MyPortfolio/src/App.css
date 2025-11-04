@@ -1,113 +1,50 @@
 @import "tailwindcss";
 
-.nav-underline {
+.app-bg {
+  min-height: 100vh;
+  background-image: url('./assets/bgimage.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: black; /* fallback for slower loads */
+  color: white;
   position: relative;
-  display: inline-block;
-  color: inherit;
-  transition: color 0.2s;
+  overflow: hidden;
 }
 
-.nav-underline::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-  width: 0;
-  height: 2px;
-  background: #14b8a6; /* Tailwind teal-400 */
-  transition: width 0.3s cubic-bezier(0.4,0,0.2,1);
+/* Dark gradient overlay */
+.app-bg::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.85),
+    rgba(0, 0, 0, 0.75)
+  );
+  z-index: -1;
 }
 
-.nav-underline:hover::after {
-  width: 100%;
+/* White fade-in overlay for entry animation */
+.app-bg::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgb(24, 22, 22);
+  z-index: 9999; /* on top of everything */
+  animation: fadeOutWhite 1.5s ease-out forwards;
 }
 
-.nav-underline-active {
-  position: relative;
-  color: #14b8a6 !important;
-}
-
-.nav-underline-active::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-  width: 100%;
-  height: 2px;
-  background: #14b8a6;
-}
-
-.project-underline::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  width: 0;
-  height: 2px;
-  background: #14b8a6;
-  transition: width 0.3s cubic-bezier(0.4,0,0.2,1);
-}
-
-.group:hover .project-underline::after {
-  width: 100%;
-}
-
-.blog-underline::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  width: 0;
-  height: 2px;
-  background: #14b8a6;
-  transition: width 0.3s cubic-bezier(0.4,0,0.2,1);
-}
-
-.group:hover .blog-underline::after {
-  width: 100%;
-}
-
-.hero-underline::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -8px;
-  width: 0;
-  height: 4px;
-  background: #14b8a6;
-  transition: width 0.4s cubic-bezier(0.4,0,0.2,1);
-}
-
-.hero-underline:hover::after {
-  width: 100%;
-}
-
-.about-underline::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  width: 0;
-  height: 3px;
-  background: #14b8a6;
-  transition: width 0.4s cubic-bezier(0.4,0,0.2,1);
-}
-
-.about-underline:hover::after {
-  width: 100%;
-}
-
-.contact-underline::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  width: 0;
-  height: 3px;
-  background: #14b8a6;
-  transition: width 0.4s cubic-bezier(0.4,0,0.2,1);
-}
-
-.contact-underline:hover::after {
-  width: 100%;
+/* Keyframes for the white-to-dark transition */
+@keyframes fadeOutWhite {
+  0% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
 }

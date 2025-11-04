@@ -38,7 +38,7 @@ const Skills = () => {
   };
 
   return (
-    <div id="skills" className="flex flex-col items-center py-2 px-4 bg-black text-white">
+    <div id="skills" className="flex flex-col items-center py-2 px-4 bg-transparent text-white">
 
       <div className="w-full max-w-2xl mx-auto py-4 md:py-10 border-dashed border-b-2 border-gray-500 my-4">
         <h1 className='text-3xl font-bold text-left mb-8 text-white underline  underline-offset-8'>Skills I have</h1>

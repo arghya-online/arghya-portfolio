@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 
 function Navbar() {
     return (
-        <nav className='bg-black p-4 pr-10 flex justify-between items-center'>
+        <nav className='bg-transparent p-4 pr-10 flex justify-between items-center'>
             <h1 className='text-2xl font-bold text-left text-teal-500 font-SpaceGrotesk sm:text-4xl sm:pl-4 sm:flex-grow sm:mr-10'>Arghya</h1>
             <div className='flex items-center sm:block hidden'>
                 <ul className='flex gap-10 text-lg md:text-xl lg:text-2xl text-white font-SpaceGrotesk '>

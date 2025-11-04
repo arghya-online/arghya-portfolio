@@ -60,7 +60,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="bg-black text-white px-4 sm:px-6 lg:px-8 py-16 flex flex-col items-center font-Inter"
+      className="bg-transparent text-white px-4 sm:px-6 lg:px-8 py-16 flex flex-col items-center font-Inter"
     >
       <div className="w-full max-w-2xl">
         <h1 className="text-4xl font-extrabold mb-10 bg-gradient-to-r from-white via-gray-300 to-gray-500 text-transparent bg-clip-text">

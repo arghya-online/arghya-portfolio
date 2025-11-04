@@ -6,7 +6,7 @@ import { FaGlobe } from 'react-icons/fa6';
 function Hero() {
   return (
     <>
-      <div id="hero" className='flex flex-col items-center bg-black text-white p-4'>
+      <div id="hero" className='flex flex-col items-center bg-transparent text-white p-4'>
         <div className='w-full max-w-2xl mx-auto py-8 md:py-10 border-dashed border-b-2 border-gray-500 my-4;'>
 
           <div className='flex flex-col items-center mb-2'>
@@ -16,7 +16,7 @@ function Hero() {
             <h1 className='text-2xl font-bold'>Arghya</h1>
             <a href="https://x.com/arghyabuilds" className='pt-4 text-m text-gray-400 hover:text-cyan-500'>@arghyabuilds</a>
           </div>
-          <div className='mt-8 space-y-6 text-base text-gray-300 text-lg'>
+          <div className='mt-8 space-y-6 text-gray-300 text-lg'>
             <p>
               Hey, I’m <span className='text-white font-bold underline underline-offset-4'>Arghya</span>. I’m a developer based in <span className='text-white font-bold'>Kolkata</span>. I spend most of my time building websites and applications that actually help in some way. I love when something I build ends up helping someone or solving a real problem.
             </p>
