@@ -6,7 +6,7 @@ import { FaGlobe } from 'react-icons/fa6';
 function Hero() {
   return (
     <>
-      <div id="hero" className='flex flex-col items-center min-h-screen bg-black text-white p-4'>
+      <div id="hero" className='flex flex-col items-center bg-black text-white p-4'>
         <div className='w-full max-w-2xl mx-auto py-8 md:py-10 border-dashed border-b-2 border-gray-500 my-4;'>
 
           <div className='flex flex-col items-center mb-2'>
