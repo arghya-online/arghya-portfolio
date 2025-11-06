@@ -2,7 +2,7 @@ import React from 'react';
 
 const JwtMongooseBlog = () => (
   <div className="min-h-screen bg-black text-white font-sans">
-    <article className="max-w-3xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+    <article className="max-w-3xl mx-auto py-12 px-1 sm:px-6 lg:px-8">
       <h1 className="text-4xl sm:text-5xl font-extrabold mb-6 text-white">
         How I Made JWT Work Inside My Mongoose Model
       </h1>
@@ -16,7 +16,7 @@ const JwtMongooseBlog = () => (
       <p className="leading-relaxed text-gray-300 mb-6">
         Before we jump into how this works, let’s understand the main idea. Mongoose lets you define schemas that describe how your data looks in MongoDB. 
         You can also attach custom functions to those schemas. These functions can handle anything like hashing passwords or generating tokens. 
-        That’s what I did here — I made my user model handle JWT creation by itself.
+        That’s what I did here - I made my user model handle JWT creation by itself.
       </p>
 
       <hr className="border-gray-700 mb-10" />
