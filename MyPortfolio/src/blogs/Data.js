@@ -13,10 +13,11 @@ export const blogs = [
   link: "/blogs/what-is-nodejs",
  },
  {
-  id: "wave-oscillator",
-  title: "WaveOscillator",
-  desc: "A MATLAB-based program that generates and visualizes sine, square, triangular, and sawtooth wave oscillators with clean plots.",
-  link: "/blogs/wave-oscillator",
-},
+  id: "jwt-in-mongoose-model",
+  title: "How I Made JWT Work Inside My Mongoose Model",
+  desc: "A clean walkthrough showing how to make your Mongoose user model handle JWT generation on its own — no extra auth utilities or middleware needed.",
+  link: "/blogs/jwt-in-mongoose-model",
+}
+,
 
 ];

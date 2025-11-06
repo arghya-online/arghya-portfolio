@@ -5,7 +5,7 @@ import { motion } from "framer-motion"; // ✅ for animation
 // Import your full written blogs here
 import VscodeSetup from "./writtenBlogs/VscodeSetup";
 import WhatIsNode from "./writtenBlogs/WhatIsNode";
-import WaveOscillator from "./writtenBlogs/WaveOscillator";
+import JwtInMongooseBlog from "./writtenBlogs/JwtInMongooseBlog";
 
 export default function BlogPage() {
   const { id } = useParams();
@@ -14,7 +14,7 @@ export default function BlogPage() {
   const blogComponents = {
     "vscode-setup": <VscodeSetup />,
     "what-is-nodejs": <WhatIsNode />,
-    "wave-oscillator": <WaveOscillator />,
+    "jwt-in-mongoose-model": <JwtInMongooseBlog />,
   };
 
   const BlogComponent = blogComponents[id];
